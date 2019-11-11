@@ -17,12 +17,14 @@ $(() => {
   });
 
   $("#bAsync").click(() => {
-    makePassword(result => {
+    const renderRandomNum = result => {
       $("#passMe").html(result);
-    });
+    };
+    // todo practice here !
+    makePassword(renderRandomNum);
   });
 
-  function makePassword(callback1, callback2) {
+  function makePassword(callback1) {
     var firstNum = parseInt(prompt("enter a number"));
     var secondNum = parseInt(prompt("enter a number"));
     setTimeout(() => {
