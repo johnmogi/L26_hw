@@ -1,0 +1,56 @@
+table {
+  margin: auto;
+  text-align: center;
+}
+
+/* 
+table,
+th,
+td {
+    border: 1px solid blue;
+}
+
+tbody>tr:nth-of-type(even) {
+    background-color: lightcoral;
+}
+
+tbody>tr:nth-of-type(odd) {
+    background-color: lightgreen;
+}
+
+thead>tr {
+    background-color: lightgray;
+} */
+#mc-field-group {
+  color: #fff !important;
+}
+
+table {
+  margin: auto;
+  text-align: center;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+/* 
+table,
+th,
+td {
+    border: 1px solid blue;
+}
+
+tbody>tr:nth-of-type(even) {
+    background-color: lightcoral;
+}
+
+tbody>tr:nth-of-type(odd) {
+    background-color: lightgreen;
+}
+
+thead>tr {
+    background-color: lightgray;
+} */
+#mc-field-group {
+  color: #fff !important;
+}
+/*# sourceMappingURL=styles.css.map */
