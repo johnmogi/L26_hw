@@ -1,33 +1,26 @@
 /// <reference path="jquery-3.4.1.js" />
 $(() => {
-function getAjaxData(url, callback) {
-  $.ajax({
-      method: "GET",
-      url: url, 
-      error: err => alert(err.message),
-      success: response => callback(response)
-  });
+
+  function getAjaxData() {
+    $.ajax({
+        method: "GET",
+        url: "https://jsonplaceholder.typicode.com/todos/1", 
+        error: err => alert(err.message),
+        success: myObj => displayDiv(myObj)
+    });
 }
 
-// Display the users: 
-function displayData() {
-  console.log(callback)
+function displayDiv(myObj){
+        const div = `
+        <p>userId : ${myObj.userId}</p>
+        <p>id : ${myObj.id}</p>
+        <p>title : ${myObj.title}</p>
+        <p>completed : ${myObj.completed}</p>
+        ` ;
+        $("#passMe").append(div);
 }
-
-function showData() {
-  getAjaxData("https://jsonplaceholder.typicode.com/todos/", finalData => displayData(callback));
-
-}
-
-
-
-
 $("#bAsync").click(() => {
+getAjaxData();
 
-  // showData()
-
-  $("#passMe").html(showData());
-
-});
-
+}); 
 }); 
